@@ -1,0 +1,12 @@
+{
+  "env": {
+    "browser": true
+  },
+  "extends": ["airbnb", "airbnb/hooks", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "react/prop-types": "off",
+    "react/jsx-curly-newline": "off",
+    "react/jsx-one-expression-per-line": "off"
+  }
+}
