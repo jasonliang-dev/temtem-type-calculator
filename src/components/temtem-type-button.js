@@ -21,7 +21,7 @@ const TemtemTypeButton = ({ name, image, onClick, variant }) => {
       <div className="flex items-center">
         {image && (
           <img
-            className={`inline ${variant === "disabled" ? "opacity-50 " : ""}`}
+            className={`inline ${variant === "disabled" ? "opacity-50" : ""}`}
             alt=""
             // eslint-disable-next-line global-require, import/no-dynamic-require
             src={require(`../images/${image}`)}

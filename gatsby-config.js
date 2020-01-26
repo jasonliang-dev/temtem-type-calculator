@@ -35,6 +35,22 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-156434015-2",
+        head: true, // `true` in head and `false` in body
+        anonymize: true,
+        respectDNT: true,
+      },
+    },
     `gatsby-plugin-postcss`,
+    // purgecss must be after postcss
+    // {
+    //   resolve: `gatsby-plugin-purgecss`,
+    //   options: {
+    //     tailwind: true, // Enable tailwindcss support
+    //   }
+    // }
   ],
 }
