@@ -1,81 +1,96 @@
 import React from "react"
 
 import TemtemTypeButton from "./temtem-type-button"
+import GlobalStateContext from "../context/GlobalStateContext"
+import {
+  attackDirection as attackDirectionEnum,
+  buttonVariant,
+} from "../constants"
 
 const TemtemTypeSelector = ({
-  dataEdges,
   selectedTypes,
   setSelectedTypes,
-  damageDirection,
+  attackDirection,
 }) => {
-  const secondaryTypeSelector = (
-    <>
-      <h2 className="font-bold text-xl my-2">Secondary Type</h2>
-      <ul className="flex flex-wrap">
-        {dataEdges.map(({ node }) => (
-          <li key={node.name} className="inline">
-            <TemtemTypeButton
-              name={node.name}
-              image={node.image}
-              onClick={
-                node.name === selectedTypes.first
-                  ? () => {}
-                  : () =>
-                      setSelectedTypes(prev => ({
-                        ...prev,
-                        second: node.name,
-                      }))
-              }
-              variant={(() => {
-                if (node.name === selectedTypes.first) {
-                  return "disabled"
-                }
+  const { typeDictionary } = React.useContext(GlobalStateContext)
 
-                if (node.name === selectedTypes.second) {
-                  return "selected"
-                }
-
-                return null
-              })()}
-            />
-          </li>
-        ))}
-        <li className="inline">
-          <TemtemTypeButton
-            name="None"
-            onClick={() =>
-              setSelectedTypes(prev => ({ ...prev, second: undefined }))
-            }
-            variant={selectedTypes.second ? null : "selected"}
-          />
-        </li>
-      </ul>
-    </>
-  )
+  const headerClasses = "font-bold text-xl text-center mb-2"
+  const buttonListClasses = "flex flex-wrap justify-center -mx-2"
 
   return (
-    <>
-      <h2 className="font-bold text-xl mb-2">Primary Type</h2>
-      <ul className="flex flex-wrap">
-        {dataEdges.map(({ node }) => (
-          <li key={node.name} className="inline">
+    <div className="flex flex-col">
+      <h2 className={headerClasses}>
+        {attackDirection === attackDirectionEnum.DEFENCE
+          ? "Primary Type"
+          : "Technique Type"}
+      </h2>
+      <ul className={buttonListClasses}>
+        {Object.values(typeDictionary).map(type => (
+          <li key={type.name}>
             <TemtemTypeButton
-              name={node.name}
-              image={node.image}
+              name={type.name}
+              image={type.image}
               onClick={() =>
                 setSelectedTypes(prev => ({
                   ...prev,
-                  first: node.name,
-                  second: prev.second === node.name ? undefined : prev.second,
+                  first: type.name,
+                  second: prev.second === type.name ? undefined : prev.second,
                 }))
               }
-              variant={node.name === selectedTypes.first ? "selected" : null}
+              variant={
+                type.name === selectedTypes.first
+                  ? buttonVariant.SELECTED
+                  : null
+              }
             />
           </li>
         ))}
       </ul>
-      {damageDirection === "defence" ? secondaryTypeSelector : null}
-    </>
+      {attackDirection === attackDirectionEnum.DEFENCE && (
+        <>
+          <h2 className={`${headerClasses} mt-2`}>Secondary Type</h2>
+          <ul className={buttonListClasses}>
+            {Object.values(typeDictionary).map(type => (
+              <li key={type.name}>
+                <TemtemTypeButton
+                  name={type.name}
+                  image={type.image}
+                  onClick={
+                    type.name === selectedTypes.first
+                      ? () => {}
+                      : () =>
+                          setSelectedTypes(prev => ({
+                            ...prev,
+                            second: type.name,
+                          }))
+                  }
+                  variant={(() => {
+                    if (type.name === selectedTypes.first) {
+                      return buttonVariant.DISABLED
+                    }
+
+                    if (type.name === selectedTypes.second) {
+                      return buttonVariant.SELECTED
+                    }
+
+                    return null
+                  })()}
+                />
+              </li>
+            ))}
+            <li className="inline">
+              <TemtemTypeButton
+                name="None"
+                onClick={() =>
+                  setSelectedTypes(prev => ({ ...prev, second: undefined }))
+                }
+                variant={selectedTypes.second ? null : buttonVariant.SELECTED}
+              />
+            </li>
+          </ul>
+        </>
+      )}
+    </div>
   )
 }
 

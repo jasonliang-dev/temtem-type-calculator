@@ -46,11 +46,11 @@ module.exports = {
     },
     `gatsby-plugin-postcss`,
     // purgecss must be after postcss
-    // {
-    //   resolve: `gatsby-plugin-purgecss`,
-    //   options: {
-    //     tailwind: true, // Enable tailwindcss support
-    //   }
-    // }
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true, // Enable tailwindcss support
+      }
+    },
   ],
 }

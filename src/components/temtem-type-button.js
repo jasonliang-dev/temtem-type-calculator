@@ -1,12 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 
+import { buttonVariant } from "../constants"
+
 const TemtemTypeButton = ({ name, image, onClick, variant }) => {
   let additionalButtonStyles
 
-  if (variant === "disabled") {
+  if (variant === buttonVariant.DISABLED) {
     additionalButtonStyles = "bg-gray-300 text-gray-700 cursor-not-allowed"
-  } else if (variant === "selected") {
+  } else if (variant === buttonVariant.SELECTED) {
     additionalButtonStyles = "bg-teal-200 hover:bg-teal-300 text-teal-900"
   } else {
     additionalButtonStyles = "bg-gray-100 hover:bg-gray-200 text-gray-900"
@@ -14,17 +16,16 @@ const TemtemTypeButton = ({ name, image, onClick, variant }) => {
 
   return (
     <button
-      className={`mr-3 mb-4 p-2 shadow w-32 h-12 rounded ${additionalButtonStyles}`}
+      className={`mx-2 mb-4 px-2 shadow w-24 lg:w-32 h-12 rounded ${additionalButtonStyles}`}
       type="button"
       onClick={onClick}
     >
       <div className="flex items-center">
         {image && (
           <img
-            className={`inline ${variant === "disabled" ? "opacity-50" : ""}`}
+            className={`w-6 h-6 lg:w-8 lg:h-8 ${variant === "disabled" ? "opacity-50" : ""}`}
             alt=""
-            // eslint-disable-next-line global-require, import/no-dynamic-require
-            src={require(`../images/${image}`)}
+            src={`/images/types/${image}`}
           />
         )}
         <span className="flex-grow">{name}</span>
@@ -37,7 +38,11 @@ TemtemTypeButton.propTypes = {
   name: PropTypes.string.isRequired,
   image: PropTypes.string,
   onClick: PropTypes.func,
-  variant: PropTypes.oneOf(["selected", "disabled", null]),
+  variant: PropTypes.oneOf([
+    buttonVariant.SELECTED,
+    buttonVariant.DISABLED,
+    null,
+  ]),
 }
 
 TemtemTypeButton.defaultProps = {

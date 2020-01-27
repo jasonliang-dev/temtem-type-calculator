@@ -1,59 +1,54 @@
 import React from "react"
 import * as R from "ramda"
 
-const TypeMatchup = ({ dataEdges, selectedTypes, damageDirection }) => {
+import { attackDirection as attackDirectionEnum } from "../constants"
+import GlobalStateContext from "../context/GlobalStateContext"
+
+const TypeMatchup = ({ selectedTypes, attackDirection }) => {
+  const { typeDictionary } = React.useContext(GlobalStateContext)
+
   const offensiveTypeMatchups = React.useMemo(() => {
     const calculateMultiplier = (arr, factor) =>
       arr.find(R.equals(selectedTypes.first)) ? factor : 1
 
-    return dataEdges.map(
-      edge => ({
-        name: edge.node.name,
-        image: edge.node.image,
+    return Object.values(typeDictionary).map(type => {
+      return {
+        name: type.name,
+        image: type.image,
         effectiveness:
-          calculateMultiplier(edge.node.effective, 2) *
-          calculateMultiplier(edge.node.ineffective, 0.5),
-      }),
-      []
-    )
-  }, [dataEdges, selectedTypes.first])
+          calculateMultiplier(type.effective, 2) *
+          calculateMultiplier(type.ineffective, 0.5),
+      }
+    }, [])
+  }, [typeDictionary, selectedTypes.first])
 
   const defensiveTypeMatchups = React.useMemo(() => {
-    const first = dataEdges.find(
-      ({ node }) => node.name === selectedTypes.first
-    )
-    const second = dataEdges.find(
-      ({ node }) => node.name === selectedTypes.second
-    )
-    const combinedTypeData = R.mergeWith(
+    const combined = R.mergeWith(
       R.concat,
-      first ? first.node : {},
-      second ? second.node : {}
+      typeDictionary[selectedTypes.first] || {},
+      typeDictionary[selectedTypes.second] || {}
     )
 
-    return dataEdges.map(edge => {
+    return Object.values(typeDictionary).map(type => {
       const calculateMultiplier = (arr, factor) =>
         arr.reduce(
           (product, typeName) =>
-            typeName === edge.node.name ? product * factor : product,
+            typeName === type.name ? product * factor : product,
           1
         )
 
       return {
-        name: edge.node.name,
-        image: edge.node.image,
+        name: type.name,
+        image: type.image,
         effectiveness:
-          calculateMultiplier(combinedTypeData.effective, 2) *
-          calculateMultiplier(combinedTypeData.ineffective, 0.5),
+          calculateMultiplier(combined.effective || [], 2) *
+          calculateMultiplier(combined.ineffective || [], 0.5),
       }
     }, [])
-  }, [dataEdges, selectedTypes.first, selectedTypes.second])
-
-  // console.log("offensiveTypeMatchups", offensiveTypeMatchups)
-  // console.log("defensiveTypeMatchups", defensiveTypeMatchups)
+  }, [typeDictionary, selectedTypes.first, selectedTypes.second])
 
   return [4, 2, 1, 0.5, 0.25].map(multiplier => {
-    const filtered = (damageDirection === "offence"
+    const filtered = (attackDirection === attackDirectionEnum.OFFENCE
       ? offensiveTypeMatchups
       : defensiveTypeMatchups
     ).filter(R.propEq("effectiveness", multiplier))
@@ -64,16 +59,15 @@ const TypeMatchup = ({ dataEdges, selectedTypes, damageDirection }) => {
 
     return (
       <div key={multiplier} className="my-3">
-        <h2 className="font-bold mb-1">
-          {damageDirection === "offence"
+        <h2 className="font-bold mb-2">
+          {attackDirection === attackDirectionEnum.OFFENCE
             ? `Deals ${multiplier}x damage to`
-            : `Takes ${multiplier}x damage from`}
+            : `Receives ${multiplier}x damage from`}
         </h2>
         <div className="flex flex-wrap">
           {filtered.map(({ name, image }) => (
             <div key={name} className="flex items-center w-32 mb-2">
-              {/* eslint-disable-next-line global-require, import/no-dynamic-require */}
-              <img alt="" src={require(`../images/${image}`)} />
+              <img alt="" src={`/images/types/${image}`} />
               <div className="ml-1">{name}</div>
             </div>
           ))}

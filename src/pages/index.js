@@ -1,70 +1,69 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { IoMdSwap } from "react-icons/io"
+import { Link } from "gatsby"
+import queryString from "query-string"
 
 import TemtemTypeSelector from "../components/temtem-type-selector"
 import TypeMatchup from "../components/type-matchup"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import AttackDirectionButton from "../components/attack-direction-button"
+import GlobalStateContext from "../context/GlobalStateContext"
+import { attackDirection as attackDirectionEnum } from "../constants"
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-    {
-      allTypesJson {
-        edges {
-          node {
-            name
-            effective
-            ineffective
-            image
-          }
-        }
-      }
-    }
-  `)
-
-  const [damageDirection, setDamageDirection] = React.useState("defence")
+  const { typeDictionary } = React.useContext(GlobalStateContext)
+  const [attackDirection, setDamageDirection] = React.useState(
+    attackDirectionEnum.DEFENCE
+  )
   const [selectedTypes, setSelectedTypes] = React.useState({
     first: "Neutral",
     second: undefined,
   })
 
+  React.useEffect(() => {
+    const { primary, secondary } = queryString.parse(window.location.search)
+
+    if (!typeDictionary[primary]) {
+      return
+    }
+
+    setDamageDirection(attackDirectionEnum.DEFENCE)
+    setSelectedTypes({
+      first: primary,
+      second: secondary,
+    })
+  }, [typeDictionary])
+
   return (
     <Layout>
-      <SEO title="Home" />
       <div className="container mx-auto text-gray-900 flex flex-wrap">
-        <div className="w-full lg:w-1/2 px-8">
+        <div className="w-full flex justify-center mt-2 mb-8 px-4">
+          <div className="flex rounded-lg shadow">
+            <AttackDirectionButton
+              additionalClasses="rounded-l-lg"
+              attackDirection={attackDirection}
+              variant={attackDirectionEnum.OFFENCE}
+              onClick={() => setDamageDirection(attackDirectionEnum.OFFENCE)}
+            />
+            <AttackDirectionButton
+              additionalClasses="rounded-r-lg"
+              attackDirection={attackDirection}
+              variant={attackDirectionEnum.DEFENCE}
+              onClick={() => setDamageDirection(attackDirectionEnum.DEFENCE)}
+            />
+          </div>
+        </div>
+        <div className="w-full lg:w-1/2 px-4">
           <TemtemTypeSelector
-            dataEdges={data.allTypesJson.edges}
+            typeDictionary={typeDictionary}
             selectedTypes={selectedTypes}
             setSelectedTypes={setSelectedTypes}
-            damageDirection={damageDirection}
+            attackDirection={attackDirection}
           />
         </div>
-        <div className="w-full lg:w-1/2 px-8">
-          <div className="flex items-center mb-2">
-            <h2 className="w-20 font-bold text-xl">
-              {damageDirection === "offence" ? "Offence" : "Defence"}
-            </h2>
-            <button
-              className="ml-4 p-1 px-4 text-gray-700 shadow rounded flex items-center bg-gray-100 hover:bg-gray-200"
-              type="button"
-              onClick={() =>
-                setDamageDirection(
-                  damageDirection === "offence" ? "defence" : "offence"
-                )
-              }
-            >
-              <div className="text-gray-600 mr-2">
-                <IoMdSwap />
-              </div>
-              Swap
-            </button>
-          </div>
+        <div className="w-full lg:w-1/2 px-4 mt-8 lg:mt-0">
           <TypeMatchup
-            dataEdges={data.allTypesJson.edges}
             selectedTypes={selectedTypes}
-            damageDirection={damageDirection}
+            attackDirection={attackDirection}
           />
         </div>
       </div>
