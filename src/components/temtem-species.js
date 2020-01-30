@@ -3,7 +3,30 @@ import { Link, useStaticQuery, graphql } from "gatsby"
 import queryString from "query-string"
 import * as R from "ramda"
 
+import temtemBorder from "../assets/temtem-border-1.svg"
+import temtemSelect from "../assets/temtem-border-1-select.svg"
 import GlobalStateContext from "../context/GlobalStateContext"
+import styles from "./temtem-species.module.css"
+
+const TemtemSpeciesTypeIcon = ({ typeName }) => {
+  const { typeDictionary } = React.useContext(GlobalStateContext)
+
+  return (
+    <div
+      className={`rounded border-2 md:border-4 border-tem-dark-gray bg-gray-200
+        ${styles["temtem-species-type"]}
+      `}
+    >
+      <img
+        className={`w-6 h-6 lg:w-8 lg:h-8 temtem-species-type__icon
+          ${styles["temtem-species-type__icon"]}
+        `}
+        alt={typeName}
+        src={`/images/types/${typeDictionary[typeName].image}`}
+      />
+    </div>
+  )
+}
 
 const TemtemSpecies = ({ searchValue }) => {
   const data = useStaticQuery(graphql`
@@ -22,52 +45,52 @@ const TemtemSpecies = ({ searchValue }) => {
   `)
 
   const { typeDictionary } = React.useContext(GlobalStateContext)
-  const typeIconClasses =
-    "bg-white rounded-full shadow border-2 border-gray-600 w-6 h-6 lg:w-8 lg:h-8"
+  const shouldShowSpecies = React.useCallback(
+    R.o(R.startsWith(searchValue.toLowerCase()), R.toLower),
+    [searchValue]
+  )
 
-  return data.allSpeciesJson.edges
-    .filter(
-      R.compose(
-        R.startsWith(searchValue.toLowerCase()),
-        R.toLower,
-        R.path(["node", "name"])
-      )
-    )
-    .map(({ node }) => (
-      <Link
-        key={node.name}
-        className="group flex flex-col items-center m-2 md:m-4"
-        to={`/?${queryString.stringify({
-          primary: node.primaryType,
-          secondary: node.secondaryType,
-        })}`}
-      >
+  return data.allSpeciesJson.edges.map(({ node }) => (
+    <Link
+      key={node.name}
+      className={`text-center m-2 md:m-4
+        ${styles["temtem-species"]}
+        ${shouldShowSpecies(node.name) ? "" : "hidden"}
+      `}
+      to={`/?${queryString.stringify({
+        primary: node.primaryType,
+        secondary: node.secondaryType,
+      })}`}
+    >
+      <div className="relative">
+        <div className="absolute z-30 inset-x-0 flex justify-center md:justify-end -mt-2">
+          {typeDictionary[node.primaryType] && (
+            <TemtemSpeciesTypeIcon typeName={node.primaryType} />
+          )}
+          {typeDictionary[node.secondaryType] && (
+            <TemtemSpeciesTypeIcon typeName={node.secondaryType} />
+          )}
+        </div>
+        <img className="absolute z-20" alt="" src={temtemBorder} />
         <img
-          className="rounded-full border-4 lg:border-8 border-gray-200 group-hover:border-gray-500 shadow-lg w-20 h-20 lg:w-32 lg:h-32"
+          className={`absolute z-0
+            ${styles["temtem-species__select-background"]}
+          `}
           alt=""
-          src={`/images/species/${node.image}`}
+          src={temtemSelect}
         />
-        {typeDictionary[node.primaryType] && (
-          <div className="flex -mt-4 lg:-mt-6 -mb-2 ml-0 lg:ml-auto">
-            <img
-              className={typeIconClasses}
-              alt={node.primaryType}
-              src={`/images/types/${typeDictionary[node.primaryType].image}`}
-            />
-            {typeDictionary[node.secondaryType] && (
-              <img
-                className={`${typeIconClasses} ml-1`}
-                alt={node.secondaryType}
-                src={`/images/types/${
-                  typeDictionary[node.secondaryType].image
-                }`}
-              />
-            )}
-          </div>
-        )}
-        <div className="md:text-lg font-bold mt-2">{node.name}</div>
-      </Link>
-    ))
+        <div className={styles["temtem-species__inner-background"]}>
+          <img
+            className="relative z-10 w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32"
+            alt=""
+            src={`/images/species/${node.image}`}
+            loading="lazy"
+          />
+        </div>
+      </div>
+      <div className="md:text-lg lg:text-xl font-bold mt-2">{node.name}</div>
+    </Link>
+  ))
 }
 
 export default TemtemSpecies

@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Temtem Type Calculator`,
-    description: ``,
+    description: `A web app that shows the effectiveness and ineffectiveness between different Temtem types.`,
     author: `Jason Liang`,
   },
   plugins: [
@@ -44,7 +44,14 @@ module.exports = {
         respectDNT: true,
       },
     },
-    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-postcss`,
+      options: {
+        cssLoaderOptions: {
+          camelCase: false,
+        },
+      },
+    },
     // purgecss must be after postcss
     {
       resolve: `gatsby-plugin-purgecss`,

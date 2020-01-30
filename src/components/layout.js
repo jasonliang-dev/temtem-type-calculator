@@ -36,9 +36,9 @@ const Layout = ({ children }) => {
             </Link>
           </div>
         </header>
-        <main className="py-4">{children}</main>
+        <main className="pt-4 pb-16">{children}</main>
       </div>
-      <footer className="bg-gray-900 text-gray-100 text-sm mt-16">
+      <footer className="bg-gray-900 text-gray-100 text-sm">
         <div className="px-12 md:px-32 lg:px-64 py-8 md:py-16">
           <p>Temtem names and images &copy; 2020 Crema.</p>
           <p>This site is not affiliated with Crema.</p>

@@ -1,42 +1,28 @@
 import React from "react"
-import { GiBroadsword, GiBorderedShield } from "react-icons/gi"
 
-import { attackDirection as attackDirectionEnum } from "../constants"
+import styles from "./attack-direction-button.module.css"
 
-const AttackDirectionButton = ({
-  attackDirection,
-  variant,
-  onClick,
-  additionalClasses,
-}) => {
-  const baseClasses =
-    "p-2 px-4 text-xl font-bold md:w-64 flex items-center justify-center"
-  const selectedClasses =
-    attackDirection === variant
-      ? "text-gray-100 bg-teal-700 hover:bg-teal-800"
-      : "bg-gray-100 hover:bg-gray-200"
-
+const AttackDirectionButton = ({ onClick, children, mask }) => {
   return (
     <button
+      className={`relative mx-2
+        ${styles["attack-direction-button"]}
+      `}
       type="button"
-      className={`${baseClasses} ${selectedClasses} ${additionalClasses}`}
       onClick={onClick}
     >
-      {variant === attackDirectionEnum.OFFENCE ? (
-        <>
-          <div className="mr-4">
-            <GiBroadsword />
-          </div>
-          Offence
-        </>
-      ) : (
-        <>
-          <div className="mr-4">
-            <GiBorderedShield />
-          </div>
-          Defence
-        </>
-      )}
+      <div
+        className={`relative z-10 flex items-center justify-center bg-tem-dark-gray hover:bg-tem-gray text-gray-100
+          ${styles[mask]}
+        `}
+      >
+        {children}
+      </div>
+      <div
+        className={`absolute z-0 inset-0 mt-1 ml-1 bg-black opacity-25
+          ${styles[mask]}
+        `}
+      />
     </button>
   )
 }

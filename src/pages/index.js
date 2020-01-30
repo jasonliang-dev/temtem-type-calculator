@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import queryString from "query-string"
+import { GiBroadsword, GiBorderedShield } from "react-icons/gi"
 
 import TemtemTypeSelector from "../components/temtem-type-selector"
 import TypeMatchup from "../components/type-matchup"
@@ -8,6 +8,7 @@ import Layout from "../components/layout"
 import AttackDirectionButton from "../components/attack-direction-button"
 import GlobalStateContext from "../context/GlobalStateContext"
 import { attackDirection as attackDirectionEnum } from "../constants"
+import styles from "./index.module.css"
 
 const IndexPage = () => {
   const { typeDictionary } = React.useContext(GlobalStateContext)
@@ -37,20 +38,20 @@ const IndexPage = () => {
     <Layout>
       <div className="container mx-auto text-gray-900 flex flex-wrap">
         <div className="w-full flex justify-center mt-2 mb-8 px-4">
-          <div className="flex rounded-lg shadow">
-            <AttackDirectionButton
-              additionalClasses="rounded-l-lg"
-              attackDirection={attackDirection}
-              variant={attackDirectionEnum.OFFENCE}
-              onClick={() => setDamageDirection(attackDirectionEnum.OFFENCE)}
-            />
-            <AttackDirectionButton
-              additionalClasses="rounded-r-lg"
-              attackDirection={attackDirection}
-              variant={attackDirectionEnum.DEFENCE}
-              onClick={() => setDamageDirection(attackDirectionEnum.DEFENCE)}
-            />
-          </div>
+          <AttackDirectionButton
+            onClick={() => setDamageDirection(attackDirectionEnum.OFFENCE)}
+            mask="button-mask-1"
+          >
+            <GiBroadsword />
+            <span className="ml-4">Offence</span>
+          </AttackDirectionButton>
+          <AttackDirectionButton
+            onClick={() => setDamageDirection(attackDirectionEnum.DEFENCE)}
+            mask="button-mask-2"
+          >
+            <GiBorderedShield />
+            <span className="ml-4">Defence</span>
+          </AttackDirectionButton>
         </div>
         <div className="w-full lg:w-1/2 px-4">
           <TemtemTypeSelector

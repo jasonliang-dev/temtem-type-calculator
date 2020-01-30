@@ -1,0 +1,34 @@
+.temtem-species-type {
+  transform: rotate(45deg);
+}
+
+.temtem-species-type__icon {
+  transform: rotate(-45deg);
+}
+
+.temtem-species {
+}
+
+.temtem-species__select-background {
+  opacity: 0;
+  transform: scale(1.25) rotate(-8deg);
+  transition: opacity 0.25s, transform 0.25s;
+}
+
+.temtem-species:hover .temtem-species__select-background {
+  opacity: 1;
+  transform: scale(1.25) rotate(0deg);
+}
+
+.temtem-species__inner-background {
+  background-color: var(--tem-dark-blue);
+  mask-image: url(../assets/temtem-border-1-mask.svg);
+  mask-size: cover;
+}
+
+.temtem-species:hover .temtem-species__inner-background {
+  background-image: linear-gradient(
+    var(--tem-dark-blue),
+    var(--tem-light-blue)
+  );
+}

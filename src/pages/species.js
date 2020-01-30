@@ -9,7 +9,7 @@ const SpeciesPage = () => {
 
   return (
     <Layout>
-      <div className="container mx-auto text-gray-900">
+      <div className="container overflow-x-hidden mx-auto md:px-4 text-gray-900">
         <div className="w-11/12 lg:w-2/5 mx-auto bg-white shadow rounded border border-gray-400 px-4 mb-4 flex items-center">
           <div className="text-2xl text-gray-500 mr-1">
             <IoMdSearch />
