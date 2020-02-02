@@ -1,34 +1,53 @@
 import React from "react"
 import PropTypes from "prop-types"
+import * as R from "ramda"
 
 import { buttonVariant } from "../constants"
+import styles from "./temtem-type-button.module.css"
 
-const TemtemTypeButton = ({ name, image, onClick, variant }) => {
-  let additionalButtonStyles
+const strHash = str => {
+  let hash = 0
 
-  if (variant === buttonVariant.DISABLED) {
-    additionalButtonStyles = "bg-gray-300 text-gray-700 cursor-not-allowed"
-  } else if (variant === buttonVariant.SELECTED) {
-    additionalButtonStyles = "bg-teal-200 hover:bg-teal-300 text-teal-900"
-  } else {
-    additionalButtonStyles = "bg-gray-100 hover:bg-gray-200 text-gray-900"
+  if (str.length === 0) return hash
+
+  /* eslint-disable no-bitwise */
+  for (let i = 0; i < str.length; i += 1) {
+    hash = (hash << 5) - hash + str.charCodeAt(i)
+    hash |= 0
   }
 
+  return hash
+}
+
+const TemtemTypeButton = ({ name, image, onClick, variant }) => {
+  const maskHash = Math.abs(strHash(name)) % 3
+  const fgMask = ["fg-mask-1", "fg-mask-2", "fg-mask-3"][maskHash]
+  const bgMask = ["bg-mask-1", "bg-mask-2", "bg-mask-3"][maskHash]
+
   return (
-    <button
-      className={`mx-2 mb-4 px-2 shadow w-24 lg:w-32 h-12 rounded ${additionalButtonStyles}`}
-      type="button"
-      onClick={onClick}
-    >
-      <div className="flex items-center">
-        {image && (
-          <img
-            className={`w-6 h-6 lg:w-8 lg:h-8 ${variant === "disabled" ? "opacity-50" : ""}`}
-            alt=""
-            src={`/images/types/${image}`}
-          />
-        )}
-        <span className="flex-grow">{name}</span>
+    <button className="relative w-32 mb-4 md:mx-1 font-bold" type="button" onClick={onClick}>
+      <div
+        className={`absolute z-0 inset-0 bg-tem-dark-gray hover:bg-tem-gray
+          ${styles["button-mask"]}
+          ${styles[bgMask]}
+        `}
+      />
+      <div
+        className={`relative z-10 flex items-center justify-center
+          ${styles["button-mask"]}
+          ${styles[fgMask]}
+          ${R.cond([
+            [
+              R.equals(buttonVariant.DISABLED),
+              () => "bg-tem-dark-blue text-gray-200 cursor-not-allowed",
+            ],
+            [R.equals(buttonVariant.SELECTED), () => "bg-tem-orange"],
+            [R.T, () => "bg-tem-blue hover:bg-tem-light-blue"],
+          ])(variant)}
+        `}
+      >
+        {image && <img alt="" src={`/images/types/${image}`} />}
+        <span className="ml-1 pr-2">{name}</span>
       </div>
     </button>
   )

@@ -8,5 +8,13 @@
     "react/prop-types": "off",
     "react/jsx-curly-newline": "off",
     "react/jsx-one-expression-per-line": "off"
-  }
+  },
+  "overrides": [
+    {
+      "files": ["src/components/*.js"],
+      "rules": {
+        "react/prop-types": "error"
+      }
+    }
+  ]
 }

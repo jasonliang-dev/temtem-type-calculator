@@ -21,14 +21,13 @@
 }
 
 .temtem-species__inner-background {
-  background-color: var(--tem-dark-blue);
   mask-image: url(../assets/temtem-border-1-mask.svg);
   mask-size: cover;
 }
 
 .temtem-species:hover .temtem-species__inner-background {
   background-image: linear-gradient(
-    var(--tem-dark-blue),
-    var(--tem-light-blue)
+    theme('colors.tem-dark-blue'),
+    theme('colors.tem-light-blue')
   );
 }

@@ -8,7 +8,6 @@ import Layout from "../components/layout"
 import AttackDirectionButton from "../components/attack-direction-button"
 import GlobalStateContext from "../context/GlobalStateContext"
 import { attackDirection as attackDirectionEnum } from "../constants"
-import styles from "./index.module.css"
 
 const IndexPage = () => {
   const { typeDictionary } = React.useContext(GlobalStateContext)
@@ -37,10 +36,13 @@ const IndexPage = () => {
   return (
     <Layout>
       <div className="container mx-auto text-gray-900 flex flex-wrap">
-        <div className="w-full flex justify-center mt-2 mb-8 px-4">
+        <div className="w-full flex flex-wrap justify-center mt-2 mb-8 px-4">
           <AttackDirectionButton
             onClick={() => setDamageDirection(attackDirectionEnum.OFFENCE)}
             mask="button-mask-1"
+            variant={
+              attackDirection === attackDirectionEnum.OFFENCE ? "selected" : ""
+            }
           >
             <GiBroadsword />
             <span className="ml-4">Offence</span>
@@ -48,6 +50,9 @@ const IndexPage = () => {
           <AttackDirectionButton
             onClick={() => setDamageDirection(attackDirectionEnum.DEFENCE)}
             mask="button-mask-2"
+            variant={
+              attackDirection === attackDirectionEnum.DEFENCE ? "selected" : ""
+            }
           >
             <GiBorderedShield />
             <span className="ml-4">Defence</span>

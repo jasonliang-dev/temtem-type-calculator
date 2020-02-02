@@ -1,4 +1,6 @@
 import React from "react"
+import PropTypes from "prop-types"
+import * as R from "ramda"
 
 import TemtemTypeButton from "./temtem-type-button"
 import GlobalStateContext from "../context/GlobalStateContext"
@@ -64,17 +66,17 @@ const TemtemTypeSelector = ({
                             second: type.name,
                           }))
                   }
-                  variant={(() => {
-                    if (type.name === selectedTypes.first) {
-                      return buttonVariant.DISABLED
-                    }
-
-                    if (type.name === selectedTypes.second) {
-                      return buttonVariant.SELECTED
-                    }
-
-                    return null
-                  })()}
+                  variant={R.cond([
+                    [
+                      R.equals(selectedTypes.first),
+                      () => buttonVariant.DISABLED,
+                    ],
+                    [
+                      R.equals(selectedTypes.second),
+                      () => buttonVariant.SELECTED,
+                    ],
+                    [R.T, () => null],
+                  ])(type.name)}
                 />
               </li>
             ))}
@@ -92,6 +94,15 @@ const TemtemTypeSelector = ({
       )}
     </div>
   )
+}
+
+TemtemTypeSelector.propTypes = {
+  selectedTypes: PropTypes.shape({
+    first: PropTypes.string,
+    second: PropTypes.string,
+  }).isRequired,
+  setSelectedTypes: PropTypes.func.isRequired,
+  attackDirection: PropTypes.string.isRequired,
 }
 
 export default TemtemTypeSelector

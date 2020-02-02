@@ -1,6 +1,3 @@
-.attack-direction-button {
-}
-
 .button-mask-1 {
   width: 255px;
   height: 50px;
@@ -11,4 +8,8 @@
   width: 255px;
   height: 50px;
   mask: url("../assets/temtem-select-mask-2.svg");
+}
+
+.scaled {
+  transform: scale(1.05, 1.2);
 }

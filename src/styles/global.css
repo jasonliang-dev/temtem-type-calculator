@@ -4,35 +4,3 @@
 /* purgecss end ignore */
 
 @tailwind utilities;
-
-:root {
-  --tem-dark-gray: #28282a;
-  --tem-gray: #3a3a3a;
-  --tem-dark-blue: #29383e;
-  --tem-light-blue: #19c8cb;
-  --tem-med-blue: #1bd1d0;
-}
-
-.text-tem-dark-gray {
-  color: var(--tem-dark-gray);
-}
-
-.bg-tem-dark-gray {
-  background-color: var(--tem-dark-gray);
-}
-
-.bg-tem-gray {
-  background-color: var(--tem-gray);
-}
-
-.hover\:bg-tem-gray:hover {
-  background-color: var(--tem-gray);
-}
-
-.bg-tem-dark-blue {
-  background-color: var(--tem-dark-blue);
-}
-
-.border-tem-dark-gray {
-  border-color: var(--tem-dark-gray);
-}

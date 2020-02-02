@@ -1,0 +1,29 @@
+.button-mask {
+  width: calc(255px * 0.5);
+  height: calc(120px * 0.5);
+  mask-size: cover;
+}
+
+.bg-mask-1 {
+  mask-image: url("../assets/temtem-small-select-mask-bg-1.svg");
+}
+
+.fg-mask-1 {
+  mask-image: url("../assets/temtem-small-select-mask-fg-1.svg");
+}
+
+.bg-mask-2 {
+  mask-image: url("../assets/temtem-small-select-mask-bg-2.svg");
+}
+
+.fg-mask-2 {
+  mask-image: url("../assets/temtem-small-select-mask-fg-2.svg");
+}
+
+.bg-mask-3 {
+  mask-image: url("../assets/temtem-small-select-mask-bg-3.svg");
+}
+
+.fg-mask-3 {
+  mask-image: url("../assets/temtem-small-select-mask-fg-3.svg");
+}
