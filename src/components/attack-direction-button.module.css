@@ -13,3 +13,7 @@
 .scaled {
   transform: scale(1.05, 1.2);
 }
+
+.scaled-sm {
+  transform: scale(1.02, 1.1);
+}

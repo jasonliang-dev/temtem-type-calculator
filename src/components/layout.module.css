@@ -1,0 +1,8 @@
+.hr-img {
+  height: 25px;
+  mask-image: url("../assets/temtem-hr.svg");
+}
+
+.hr-shifted {
+  mask-position: 8rem 0;
+}

@@ -15,6 +15,7 @@ const strHash = str => {
     hash = (hash << 5) - hash + str.charCodeAt(i)
     hash |= 0
   }
+  /* eslint-enable no-bitwise */
 
   return hash
 }
@@ -25,7 +26,11 @@ const TemtemTypeButton = ({ name, image, onClick, variant }) => {
   const bgMask = ["bg-mask-1", "bg-mask-2", "bg-mask-3"][maskHash]
 
   return (
-    <button className="relative w-32 mb-4 md:mx-1 font-bold" type="button" onClick={onClick}>
+    <button
+      className="relative w-32 mb-4 md:mx-1 font-bold"
+      type="button"
+      onClick={onClick}
+    >
       <div
         className={`absolute z-0 inset-0 bg-tem-dark-gray hover:bg-tem-gray
           ${styles["button-mask"]}
@@ -46,7 +51,9 @@ const TemtemTypeButton = ({ name, image, onClick, variant }) => {
           ])(variant)}
         `}
       >
-        {image && <img alt="" src={`/images/types/${image}`} />}
+        {image && (
+          <img className="w-8 h-8" alt="" src={`/images/types/${image}`} />
+        )}
         <span className="ml-1 pr-2">{name}</span>
       </div>
     </button>

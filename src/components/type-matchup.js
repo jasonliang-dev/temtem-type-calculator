@@ -58,16 +58,16 @@ const TypeMatchup = ({ selectedTypes, attackDirection }) => {
     }
 
     return (
-      <div key={multiplier} className="my-3">
+      <div key={multiplier} className="flex flex-col items-center my-4">
         <h2 className="font-bold mb-2">
           {attackDirection === attackDirectionEnum.OFFENCE
             ? `Deals ${multiplier}x damage to`
             : `Receives ${multiplier}x damage from`}
         </h2>
-        <div className="flex flex-wrap">
+        <div className="flex flex-wrap justify-center">
           {filtered.map(({ name, image }) => (
-            <div key={name} className="flex items-center w-32 mb-2">
-              <img alt="" src={`/images/types/${image}`} />
+            <div key={name} className="flex items-center mx-3 mb-2">
+              <img className="w-8 h-8" alt="" src={`/images/types/${image}`} />
               <div className="ml-1">{name}</div>
             </div>
           ))}

@@ -84,7 +84,11 @@ const TemtemSpecies = ({ searchValue }) => {
           alt=""
           src={temtemSelect}
         />
-        <div className={`bg-tem-dark-blue ${styles["temtem-species__inner-background"]}`}>
+        <div
+          className={`bg-tem-dark-blue
+            ${styles["temtem-species__inner-background"]}
+          `}
+        >
           <img
             className="relative z-10 w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32"
             alt=""

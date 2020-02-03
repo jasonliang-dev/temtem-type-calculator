@@ -1,0 +1,5 @@
+.button-mask-3 {
+    width: 255px;
+    height: 50px;
+    mask: url("../assets/temtem-select-mask-3.svg");
+}
