@@ -78,9 +78,7 @@ const TemtemSpecies = ({ searchValue }) => {
         </div>
         <img className="absolute z-20" alt="" src={temtemBorder} />
         <img
-          className={`absolute z-0
-            ${styles["temtem-species__select-background"]}
-          `}
+          className={`absolute z-0 ${styles["temtem-species__select-background"]}`}
           alt=""
           src={temtemSelect}
         />
@@ -90,10 +88,9 @@ const TemtemSpecies = ({ searchValue }) => {
           `}
         >
           <img
-            className="relative z-10 w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32"
+            className="lazyload relative z-10 w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32"
             alt=""
-            src={`/images/species/${node.image}`}
-            loading="lazy"
+            data-src={`/images/species/${node.image}`}
           />
         </div>
       </div>

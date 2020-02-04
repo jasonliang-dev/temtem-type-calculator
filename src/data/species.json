@@ -4,601 +4,601 @@
     "name": "Oree",
     "primaryType": "Digital",
     "secondaryType": "",
-    "image": "Oree.png"
+    "image": "Oree.webp"
   },
   {
     "no": 3,
     "name": "Zaobian",
     "primaryType": "Digital",
     "secondaryType": "",
-    "image": "Zaobian.png"
+    "image": "Zaobian.webp"
   },
   {
     "no": 7,
     "name": "Platypet",
     "primaryType": "Water",
     "secondaryType": "Toxic",
-    "image": "Platypet.png"
+    "image": "Platypet.webp"
   },
   {
     "no": 8,
     "name": "Platox",
     "primaryType": "Water",
     "secondaryType": "Toxic",
-    "image": "Platox.png"
+    "image": "Platox.webp"
   },
   {
     "no": 9,
     "name": "Platimous",
     "primaryType": "Water",
     "secondaryType": "Toxic",
-    "image": "Platimous.png"
+    "image": "Platimous.webp"
   },
   {
     "no": 10,
     "name": "Swali",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Swali.png"
+    "image": "Swali.webp"
   },
   {
     "no": 11,
     "name": "Loali",
     "primaryType": "Nature",
     "secondaryType": "Wind",
-    "image": "Loali.png"
+    "image": "Loali.webp"
   },
   {
     "no": 12,
     "name": "Tateru",
     "primaryType": "Neutral",
     "secondaryType": "",
-    "image": "Tateru.png"
+    "image": "Tateru.webp"
   },
   {
     "no": 16,
     "name": "Paharo",
     "primaryType": "Wind",
     "secondaryType": "",
-    "image": "Paharo.png"
+    "image": "Paharo.webp"
   },
   {
     "no": 17,
     "name": "Paharac",
     "primaryType": "Wind",
     "secondaryType": "",
-    "image": "Paharac.png"
+    "image": "Paharac.webp"
   },
   {
     "no": 18,
     "name": "Granpah",
     "primaryType": "Wind",
     "secondaryType": "",
-    "image": "Granpah.png"
+    "image": "Granpah.webp"
   },
   {
     "no": 19,
     "name": "Ampling",
     "primaryType": "Electric",
     "secondaryType": "",
-    "image": "Ampling.png"
+    "image": "Ampling.webp"
   },
   {
     "no": 20,
     "name": "Amphatyr",
     "primaryType": "Electric",
     "secondaryType": "Nature",
-    "image": "Amphatyr.png"
+    "image": "Amphatyr.webp"
   },
   {
     "no": 21,
     "name": "Bunbun",
     "primaryType": "Earth",
     "secondaryType": "Crystal",
-    "image": "Bunbun.png"
+    "image": "Bunbun.webp"
   },
   {
     "no": 22,
     "name": "Mudrid",
     "primaryType": "Earth",
     "secondaryType": "Crystal",
-    "image": "Mudrid.png"
+    "image": "Mudrid.webp"
   },
   {
     "no": 23,
     "name": "Hidody",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Hidody.png"
+    "image": "Hidody.webp"
   },
   {
     "no": 24,
     "name": "Taifu",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Taifu.png"
+    "image": "Taifu.webp"
   },
   {
     "no": 25,
     "name": "Fomu",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Fomu.png"
+    "image": "Fomu.webp"
   },
   {
     "no": 26,
     "name": "Wiplump",
     "primaryType": "Water",
     "secondaryType": "Wind",
-    "image": "Wiplump.png"
+    "image": "Wiplump.webp"
   },
   {
     "no": 27,
     "name": "Skail",
     "primaryType": "Neutral",
     "secondaryType": "",
-    "image": "Skail.png"
+    "image": "Skail.webp"
   },
   {
     "no": 28,
     "name": "Skunch",
     "primaryType": "Neutral",
     "secondaryType": "Melee",
-    "image": "Skunch.png"
+    "image": "Skunch.webp"
   },
   {
     "no": 32,
     "name": "Houchic",
     "primaryType": "Mental",
     "secondaryType": "",
-    "image": "Houchic.png"
+    "image": "Houchic.webp"
   },
   {
     "no": 33,
     "name": "Tental",
     "primaryType": "Mental",
     "secondaryType": "",
-    "image": "Tental.png"
+    "image": "Tental.webp"
   },
   {
     "no": 35,
     "name": "Orphyll",
     "primaryType": "Nature",
     "secondaryType": "Toxic",
-    "image": "Orphyll.png"
+    "image": "Orphyll.webp"
   },
   {
     "no": 36,
     "name": "Nidrasil",
     "primaryType": "Nature",
     "secondaryType": "Toxic",
-    "image": "Nidrasil.png"
+    "image": "Nidrasil.webp"
   },
   {
     "no": 37,
     "name": "Banapi",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Banapi.png"
+    "image": "Banapi.webp"
   },
   {
     "no": 38,
     "name": "Capyre",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Capyre.png"
+    "image": "Capyre.webp"
   },
   {
     "no": 39,
     "name": "Lapinite",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Lapinite.png"
+    "image": "Lapinite.webp"
   },
   {
     "no": 40,
     "name": "Azuroc",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Azuroc.png"
+    "image": "Azuroc.webp"
   },
   {
     "no": 41,
     "name": "Zenoreth",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Zenoreth.png"
+    "image": "Zenoreth.webp"
   },
   {
     "no": 44,
     "name": "Bigu",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Bigu.png"
+    "image": "Bigu.webp"
   },
   {
     "no": 45,
     "name": "Babawa",
     "primaryType": "Nature",
     "secondaryType": "Water",
-    "image": "Babawa.png"
+    "image": "Babawa.webp"
   },
   {
     "no": 48,
     "name": "Kaku",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Kaku.png"
+    "image": "Kaku.webp"
   },
   {
     "no": 49,
     "name": "Saku",
     "primaryType": "Nature",
     "secondaryType": "Wind",
-    "image": "Saku.png"
+    "image": "Saku.webp"
   },
   {
     "no": 50,
     "name": "Valash",
     "primaryType": "Neutral",
     "secondaryType": "Crystal",
-    "image": "Valash.png"
+    "image": "Valash.webp"
   },
   {
     "no": 53,
     "name": "Barnshe",
     "primaryType": "Mental",
     "secondaryType": "Wind",
-    "image": "Barnshe.png"
+    "image": "Barnshe.webp"
   },
   {
     "no": 54,
     "name": "Gyalis",
     "primaryType": "Crystal",
     "secondaryType": "Melee",
-    "image": "Gyalis.png"
+    "image": "Gyalis.webp"
   },
   {
     "no": 55,
     "name": "Occlura",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Occlura.png"
+    "image": "Occlura.webp"
   },
   {
     "no": 56,
     "name": "Myx",
     "primaryType": "Crystal",
     "secondaryType": "Mental",
-    "image": "Myx.png"
+    "image": "Myx.webp"
   },
   {
     "no": 57,
     "name": "Raiber",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Raiber.png"
+    "image": "Raiber.webp"
   },
   {
     "no": 58,
     "name": "Raize",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Raize.png"
+    "image": "Raize.webp"
   },
   {
     "no": 59,
     "name": "Raican",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Raican.png"
+    "image": "Raican.webp"
   },
   {
     "no": 60,
     "name": "Pewki",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Pewki.png"
+    "image": "Pewki.webp"
   },
   {
     "no": 61,
     "name": "Piraniant",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Piraniant.png"
+    "image": "Piraniant.webp"
   },
   {
     "no": 69,
     "name": "Saipat",
     "primaryType": "Water",
     "secondaryType": "Melee",
-    "image": "Saipat.png"
+    "image": "Saipat.webp"
   },
   {
     "no": 72,
     "name": "Crystle",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Crystle.png"
+    "image": "Crystle.webp"
   },
   {
     "no": 73,
     "name": "Sherald",
     "primaryType": "Crystal",
     "secondaryType": "",
-    "image": "Sherald.png"
+    "image": "Sherald.webp"
   },
   {
     "no": 79,
     "name": "Hocus",
     "primaryType": "Mental",
     "secondaryType": "",
-    "image": "Hocus.png"
+    "image": "Hocus.webp"
   },
   {
     "no": 80,
     "name": "Pocus",
     "primaryType": "Mental",
     "secondaryType": "",
-    "image": "Pocus.png"
+    "image": "Pocus.webp"
   },
   {
     "no": 82,
     "name": "Sparzy",
     "primaryType": "Electric",
     "secondaryType": "",
-    "image": "Sparzy.png"
+    "image": "Sparzy.webp"
   },
   {
     "no": 84,
     "name": "Mushi",
     "primaryType": "Toxic",
     "secondaryType": "",
-    "image": "Mushi.png"
+    "image": "Mushi.webp"
   },
   {
     "no": 85,
     "name": "Mushook",
     "primaryType": "Toxic",
     "secondaryType": "Melee",
-    "image": "Mushook.png"
+    "image": "Mushook.webp"
   },
   {
     "no": 86,
     "name": "Magmis",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Magmis.png"
+    "image": "Magmis.webp"
   },
   {
     "no": 87,
     "name": "Mastione",
     "primaryType": "Fire",
     "secondaryType": "",
-    "image": "Mastione.png"
+    "image": "Mastione.webp"
   },
   {
     "no": 88,
     "name": "Umishi",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Umishi.png"
+    "image": "Umishi.webp"
   },
   {
     "no": 89,
     "name": "Ukama",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Ukama.png"
+    "image": "Ukama.webp"
   },
   {
     "no": 91,
     "name": "Raignet",
     "primaryType": "",
     "secondaryType": "",
-    "image": "Raignet.png"
+    "image": "Raignet.webp"
   },
   {
     "no": 92,
     "name": "Smazee",
     "primaryType": "Melee",
     "secondaryType": "",
-    "image": "Smazee.png"
+    "image": "Smazee.webp"
   },
   {
     "no": 93,
     "name": "Baboong",
     "primaryType": "Melee",
     "secondaryType": "",
-    "image": "Baboong.png"
+    "image": "Baboong.webp"
   },
   {
     "no": 95,
     "name": "Zizare",
     "primaryType": "Earth",
     "secondaryType": "",
-    "image": "Zizare.png"
+    "image": "Zizare.webp"
   },
   {
     "no": 102,
     "name": "Spriole",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Spriole.png"
+    "image": "Spriole.webp"
   },
   {
     "no": 103,
     "name": "Deendre",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Deendre.png"
+    "image": "Deendre.webp"
   },
   {
     "no": 104,
     "name": "Cerneaf",
     "primaryType": "Nature",
     "secondaryType": "",
-    "image": "Cerneaf.png"
+    "image": "Cerneaf.webp"
   },
   {
     "no": 105,
     "name": "Toxolotl",
     "primaryType": "Toxic",
     "secondaryType": "",
-    "image": "Toxolotl.png"
+    "image": "Toxolotl.webp"
   },
   {
     "no": 106,
     "name": "Noxolotl",
     "primaryType": "Toxic",
     "secondaryType": "",
-    "image": "Noxolotl.png"
+    "image": "Noxolotl.webp"
   },
   {
     "no": 107,
     "name": "Blooze",
     "primaryType": "Toxic",
     "secondaryType": "",
-    "image": "Blooze.png"
+    "image": "Blooze.webp"
   },
   {
     "no": 108,
     "name": "Goolder",
     "primaryType": "Toxic",
     "secondaryType": "",
-    "image": "Goolder.png"
+    "image": "Goolder.webp"
   },
   {
     "no": 109,
     "name": "Zephyruff",
     "primaryType": "Toxic",
     "secondaryType": "Wind",
-    "image": "Zephyruff.png"
+    "image": "Zephyruff.webp"
   },
   {
     "no": 110,
     "name": "Volarend",
     "primaryType": "Toxic",
     "secondaryType": "Wind",
-    "image": "Volarend.png"
+    "image": "Volarend.webp"
   },
   {
     "no": 113,
     "name": "Ganki",
     "primaryType": "Electric",
     "secondaryType": "Wind",
-    "image": "Ganki.png"
+    "image": "Ganki.webp"
   },
   {
     "no": 114,
     "name": "Gazuma",
     "primaryType": "Electric",
     "secondaryType": "Wind",
-    "image": "Gazuma.png"
+    "image": "Gazuma.webp"
   },
   {
     "no": 115,
     "name": "Oceara",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Oceara.png"
+    "image": "Oceara.webp"
   },
   {
     "no": 122,
     "name": "Shuine",
     "primaryType": "Crystal",
     "secondaryType": "Water",
-    "image": "Shuine.png"
+    "image": "Shuine.webp"
   },
   {
     "no": 123,
     "name": "Nessla",
     "primaryType": "Water",
     "secondaryType": "Electric",
-    "image": "Nessla.png"
+    "image": "Nessla.webp"
   },
   {
     "no": 124,
     "name": "Valiar",
     "primaryType": "Mental",
     "secondaryType": "",
-    "image": "Valiar.png"
+    "image": "Valiar.webp"
   },
   {
     "no": 127,
     "name": "Kalazu",
     "primaryType": "Water",
     "secondaryType": "",
-    "image": "Kalazu.png"
+    "image": "Kalazu.webp"
   },
   {
     "no": 128,
     "name": "Kalabyss",
     "primaryType": "Water",
     "secondaryType": "Toxic",
-    "image": "Kalabyss.png"
+    "image": "Kalabyss.webp"
   },
   {
     "no": 129,
     "name": "Adoroboros",
     "primaryType": "Toxic",
     "secondaryType": "Mental",
-    "image": "Adoroboros.png"
+    "image": "Adoroboros.webp"
   },
   {
     "no": 130,
     "name": "Tuwai",
     "primaryType": "Wind",
     "secondaryType": "",
-    "image": "Tuwai.png"
+    "image": "Tuwai.webp"
   },
   {
     "no": 133,
     "name": "Tuvine",
     "primaryType": "Wind",
     "secondaryType": "Crystal",
-    "image": "Tuvine.png"
+    "image": "Tuvine.webp"
   },
   {
     "no": 137,
     "name": "Kinu",
     "primaryType": "Nature",
     "secondaryType": "Mental",
-    "image": "Kinu.png"
+    "image": "Kinu.webp"
   },
   {
     "no": 138,
     "name": "Vulvir",
     "primaryType": "Fire",
     "secondaryType": "Earth",
-    "image": "Vulvir.png"
+    "image": "Vulvir.webp"
   },
   {
     "no": 139,
     "name": "Vulor",
     "primaryType": "Fire",
     "secondaryType": "Earth",
-    "image": "Vulor.png"
+    "image": "Vulor.webp"
   },
   {
     "no": 140,
     "name": "Vulcrane",
     "primaryType": "Fire",
     "secondaryType": "Earth",
-    "image": "Vulcrane.png"
+    "image": "Vulcrane.webp"
   },
   {
     "no": 141,
     "name": "Pigepic",
     "primaryType": "Wind",
     "secondaryType": "",
-    "image": "Pigepic.png"
+    "image": "Pigepic.webp"
   },
   {
     "no": 161,
     "name": "Anahir",
     "primaryType": "Crystal",
     "secondaryType": "Fire",
-    "image": "Anahir.png"
+    "image": "Anahir.webp"
   }
 ]

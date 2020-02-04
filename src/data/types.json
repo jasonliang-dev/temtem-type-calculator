@@ -3,72 +3,72 @@
         "name": "Neutral",
         "effective": ["Mental"],
         "ineffective": [],
-        "image": "type-neutral.png"
+        "image": "type-neutral.webp"
     },
     {
         "name": "Fire",
         "effective": ["Water", "Earth"],
         "ineffective": ["Fire", "Nature", "Crystal"],
-        "image": "type-fire.png"
+        "image": "type-fire.webp"
     },
     {
         "name": "Water",
         "effective": ["Nature", "Electric", "Toxic"],
         "ineffective": ["Fire", "Water", "Earth"],
-        "image": "type-water.png"
+        "image": "type-water.webp"
     },
     {
         "name": "Nature",
         "effective": ["Fire", "Toxic"],
         "ineffective": ["Water", "Nature", "Electric", "Earth"],
-        "image": "type-nature.png"
+        "image": "type-nature.webp"
     },
     {
         "name": "Electric",
         "effective": ["Earth", "Crystal"],
         "ineffective": ["Electric", "Wind"],
-        "image": "type-electric.png"
+        "image": "type-electric.webp"
     },
     {
         "name": "Earth",
         "effective": ["Water", "Nature", "Melee"],
         "ineffective": ["Fire", "Electric", "Crystal", "Toxic"],
-        "image": "type-earth.png"
+        "image": "type-earth.webp"
     },
     {
         "name": "Mental",
         "effective": ["Electric", "Digital", "Crystal"],
         "ineffective": ["Neutral", "Melee"],
-        "image": "type-mental.png"
+        "image": "type-mental.webp"
     },
     {
         "name": "Wind",
         "effective": ["Electric"],
         "ineffective": ["Earth", "Wind"],
-        "image": "type-wind.png"
+        "image": "type-wind.webp"
     },
     {
         "name": "Digital",
         "effective": ["Water", "Electric", "Digital"],
         "ineffective": ["Toxic"],
-        "image": "type-digital.png"
+        "image": "type-digital.webp"
     },
     {
         "name": "Melee",
         "effective": ["Mental", "Digital"],
         "ineffective": ["Melee"],
-        "image": "type-melee.png"
+        "image": "type-melee.webp"
     },
     {
         "name": "Crystal",
         "effective": ["Fire", "Earth", "Melee"],
         "ineffective": ["Electric", "Mental", "Toxic"],
-        "image": "type-crystal.png"
+        "image": "type-crystal.webp"
     },
     {
         "name": "Toxic",
         "effective": ["Wind"],
         "ineffective": ["Water", "Nature", "Toxic"],
-        "image": "type-toxic.png"
+        "image": "type-toxic.webp"
     }
 ]
