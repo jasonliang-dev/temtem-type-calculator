@@ -17,7 +17,6 @@
     "gatsby-source-filesystem": "^2.1.40",
     "gatsby-transformer-json": "^2.2.25",
     "gatsby-transformer-sharp": "^2.3.7",
-    "lazysizes": "^5.2.0",
     "prop-types": "^15.7.2",
     "query-string": "^6.10.1",
     "ramda": "^0.26.1",
