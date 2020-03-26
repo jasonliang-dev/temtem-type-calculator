@@ -1,4 +1,5 @@
 import React from "react"
+import "lazysizes"
 import "./src/styles/global.css"
 
 import { GlobalStateProvider } from "./src/context/GlobalStateContext"
