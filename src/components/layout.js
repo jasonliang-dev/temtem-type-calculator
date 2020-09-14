@@ -73,7 +73,7 @@ const Layout = ({ location, children }) => {
           <div className="mt-6">
             <a
               className="text-gray-500 hover:text-gray-200 inline-flex items-center"
-              href="https://github.com/jasonliang512/temtem-type-calculator"
+              href="https://github.com/jasonliang-dev/temtem-type-calculator"
             >
               <div className="text-2xl mr-2">
                 <FaGithub aria-label="GitHub" />
