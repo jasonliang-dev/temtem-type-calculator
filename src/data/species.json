@@ -1,5 +1,12 @@
 [
   {
+    "no": 1,
+    "name": "Mimit",
+    "primaryType": "Digital",
+    "secondaryType": "",
+    "image": "Mimit.png"
+  },
+  {
     "no": 2,
     "name": "Oree",
     "primaryType": "Digital",
@@ -12,6 +19,27 @@
     "primaryType": "Digital",
     "secondaryType": "",
     "image": "Zaobian.png"
+  },
+  {
+    "no": 4,
+    "name": "Chromeon",
+    "primaryType": "Digital",
+    "secondaryType": "",
+    "image": "Chromeon.png"
+  },
+  {
+    "no": 5,
+    "name": "Halzhi",
+    "primaryType": "Digital",
+    "secondaryType": "",
+    "image": "Halzhi.png"
+  },
+  {
+    "no": 6,
+    "name": "Molgu",
+    "primaryType": "Digital",
+    "secondaryType": "",
+    "image": "Molgu.png"
   },
   {
     "no": 7,
@@ -147,6 +175,27 @@
     "image": "Skunch.png"
   },
   {
+    "no": 29,
+    "name": "Goty",
+    "primaryType": "Neutral",
+    "secondaryType": "",
+    "image": "Goty.png"
+  },
+  {
+    "no": 30,
+    "name": "Mouflank",
+    "primaryType": "Neutral",
+    "secondaryType": "",
+    "image": "Mouflank.png"
+  },
+  {
+    "no": 31,
+    "name": "Rhoulder",
+    "primaryType": "Neutral",
+    "secondaryType": "Earth",
+    "image": "Rhoulder.png"
+  },
+  {
     "no": 32,
     "name": "Houchic",
     "primaryType": "Mental",
@@ -159,6 +208,13 @@
     "primaryType": "Mental",
     "secondaryType": "",
     "image": "Tental.png"
+  },
+  {
+    "no": 34,
+    "name": "Nagaise",
+    "primaryType": "Mental",
+    "secondaryType": "Water",
+    "image": "Nagaise.png"
   },
   {
     "no": 35,
@@ -224,6 +280,20 @@
     "image": "Babawa.png"
   },
   {
+    "no": 46,
+    "name": "0b1",
+    "primaryType": "Digital",
+    "secondaryType": "Electric",
+    "image": "0b1.png"
+  },
+  {
+    "no": 47,
+    "name": "0b10",
+    "primaryType": "Digital",
+    "secondaryType": "Electric",
+    "image": "0b10.png"
+  },
+  {
     "no": 48,
     "name": "Kaku",
     "primaryType": "Nature",
@@ -247,8 +317,8 @@
   {
     "no": 53,
     "name": "Barnshe",
-    "primaryType": "Mental",
-    "secondaryType": "Wind",
+    "primaryType": "Wind",
+    "secondaryType": "Mental",
     "image": "Barnshe.png"
   },
   {
@@ -308,11 +378,74 @@
     "image": "Piraniant.png"
   },
   {
+    "no": 62,
+    "name": "Scarawatt",
+    "primaryType": "Electric",
+    "secondaryType": "",
+    "image": "Scarawatt.png"
+  },
+  {
+    "no": 63,
+    "name": "Scaravolt",
+    "primaryType": "Electric",
+    "secondaryType": "Fire",
+    "image": "Scaravolt.png"
+  },
+  {
+    "no": 64,
+    "name": "Hoglip",
+    "primaryType": "Digital",
+    "secondaryType": "Fire",
+    "image": "Hoglip.png"
+  },
+  {
+    "no": 65,
+    "name": "Hedgine",
+    "primaryType": "Digital",
+    "secondaryType": "Fire",
+    "image": "Hedgine.png"
+  },
+  {
+    "no": 66,
+    "name": "Osuchi",
+    "primaryType": "Earth",
+    "secondaryType": "",
+    "image": "Osuchi.png"
+  },
+  {
+    "no": 67,
+    "name": "Osukan",
+    "primaryType": "Earth",
+    "secondaryType": "Melee",
+    "image": "Osukan.png"
+  },
+  {
+    "no": 68,
+    "name": "Osukai",
+    "primaryType": "Earth",
+    "secondaryType": "Melee",
+    "image": "Osukai.png"
+  },
+  {
     "no": 69,
     "name": "Saipat",
     "primaryType": "Water",
     "secondaryType": "Melee",
     "image": "Saipat.png"
+  },
+  {
+    "no": 70,
+    "name": "Pycko",
+    "primaryType": "Earth",
+    "secondaryType": "Fire",
+    "image": "Pycko.png"
+  },
+  {
+    "no": 71,
+    "name": "Drakash",
+    "primaryType": "Earth",
+    "secondaryType": "Fire",
+    "image": "Drakash.png"
   },
   {
     "no": 72,
@@ -329,6 +462,27 @@
     "image": "Sherald.png"
   },
   {
+    "no": 74,
+    "name": "Tortenite",
+    "primaryType": "Crystal",
+    "secondaryType": "Toxic",
+    "image": "Tortenite.png"
+  },
+  {
+    "no": 75,
+    "name": "Innki",
+    "primaryType": "Electric",
+    "secondaryType": "Crystal",
+    "image": "Innki.png"
+  },
+  {
+    "no": 78,
+    "name": "Cycrox",
+    "primaryType": "Digital",
+    "secondaryType": "Toxic",
+    "image": "Cycrox.png"
+  },
+  {
     "no": 79,
     "name": "Hocus",
     "primaryType": "Mental",
@@ -343,11 +497,25 @@
     "image": "Pocus.png"
   },
   {
+    "no": 81,
+    "name": "Smolzy",
+    "primaryType": "Electric",
+    "secondaryType": "",
+    "image": "Smolzy.png"
+  },
+  {
     "no": 82,
     "name": "Sparzy",
     "primaryType": "Electric",
     "secondaryType": "",
     "image": "Sparzy.png"
+  },
+  {
+    "no": 83,
+    "name": "Golzy",
+    "primaryType": "Electric",
+    "secondaryType": "Melee",
+    "image": "Golzy.png"
   },
   {
     "no": 84,
@@ -392,9 +560,16 @@
     "image": "Ukama.png"
   },
   {
+    "no": 90,
+    "name": "Galvanid",
+    "primaryType": "Electric",
+    "secondaryType": "",
+    "image": "Galvanid.png"
+  },
+  {
     "no": 91,
     "name": "Raignet",
-    "primaryType": "",
+    "primaryType": "Electric",
     "secondaryType": "",
     "image": "Raignet.png"
   },
@@ -413,11 +588,39 @@
     "image": "Baboong.png"
   },
   {
+    "no": 94,
+    "name": "Seismunch",
+    "primaryType": "Melee",
+    "secondaryType": "Earth",
+    "image": "Seismunch.png"
+  },
+  {
     "no": 95,
     "name": "Zizare",
     "primaryType": "Earth",
     "secondaryType": "",
     "image": "Zizare.png"
+  },
+  {
+    "no": 99,
+    "name": "Momo",
+    "primaryType": "Neutral",
+    "secondaryType": "",
+    "image": "Momo.png"
+  },
+  {
+    "no": 100,
+    "name": "Kuri",
+    "primaryType": "Earth",
+    "secondaryType": "",
+    "image": "Kuri.png"
+  },
+  {
+    "no": 101,
+    "name": "Kauren",
+    "primaryType": "Earth",
+    "secondaryType": "",
+    "image": "Kauren.png"
   },
   {
     "no": 102,
@@ -483,6 +686,20 @@
     "image": "Volarend.png"
   },
   {
+    "no": 111,
+    "name": "Grumvel",
+    "primaryType": "Earth",
+    "secondaryType": "",
+    "image": "Grumvel.png"
+  },
+  {
+    "no": 112,
+    "name": "Grumper",
+    "primaryType": "Earth",
+    "secondaryType": "Electric",
+    "image": "Grumper.png"
+  },
+  {
     "no": 113,
     "name": "Ganki",
     "primaryType": "Electric",
@@ -504,6 +721,27 @@
     "image": "Oceara.png"
   },
   {
+    "no": 116,
+    "name": "Yowlar",
+    "primaryType": "Neutral",
+    "secondaryType": "",
+    "image": "Yowlar.png"
+  },
+  {
+    "no": 117,
+    "name": "Droply",
+    "primaryType": "Water",
+    "secondaryType": "Earth",
+    "image": "Droply.png"
+  },
+  {
+    "no": 118,
+    "name": "Garyo",
+    "primaryType": "Water",
+    "secondaryType": "Earth",
+    "image": "Garyo.png"
+  },
+  {
     "no": 122,
     "name": "Shuine",
     "primaryType": "Crystal",
@@ -523,6 +761,20 @@
     "primaryType": "Mental",
     "secondaryType": "",
     "image": "Valiar.png"
+  },
+  {
+    "no": 125,
+    "name": "Pupoise",
+    "primaryType": "Digital",
+    "secondaryType": "Nature",
+    "image": "Pupoise.png"
+  },
+  {
+    "no": 126,
+    "name": "Loatle",
+    "primaryType": "Digital",
+    "secondaryType": "Mental",
+    "image": "Loatle.png"
   },
   {
     "no": 127,
@@ -553,11 +805,39 @@
     "image": "Tuwai.png"
   },
   {
+    "no": 131,
+    "name": "Tukai",
+    "primaryType": "Wind",
+    "secondaryType": "Water",
+    "image": "Tukai.png"
+  },
+  {
+    "no": 132,
+    "name": "Tulcan",
+    "primaryType": "Wind",
+    "secondaryType": "Fire",
+    "image": "Tulcan.png"
+  },
+  {
     "no": 133,
     "name": "Tuvine",
     "primaryType": "Wind",
     "secondaryType": "Crystal",
     "image": "Tuvine.png"
+  },
+  {
+    "no": 134,
+    "name": "Turoc",
+    "primaryType": "Wind",
+    "secondaryType": "Earth",
+    "image": "Turoc.png"
+  },
+  {
+    "no": 135,
+    "name": "Tuwire",
+    "primaryType": "Wind",
+    "secondaryType": "Digital",
+    "image": "Tuwire.png"
   },
   {
     "no": 137,
@@ -595,10 +875,59 @@
     "image": "Pigepic.png"
   },
   {
+    "no": 142,
+    "name": "Akranox",
+    "primaryType": "Earth",
+    "secondaryType": "Toxic",
+    "image": "Akranox.png"
+  },
+  {
+    "no": 143,
+    "name": "Koish",
+    "primaryType": "Water",
+    "secondaryType": "",
+    "image": "Koish.png"
+  },
+  {
+    "no": 144,
+    "name": "Vulffy",
+    "primaryType": "Earth",
+    "secondaryType": "Nature",
+    "image": "Vulffy.png"
+  },
+  {
+    "no": 145,
+    "name": "Chubee",
+    "primaryType": "Digital",
+    "secondaryType": "Wind",
+    "image": "Chubee.png"
+  },
+  {
+    "no": 146,
+    "name": "Waspeen",
+    "primaryType": "Digital",
+    "secondaryType": "Crystal",
+    "image": "Waspeen.png"
+  },
+  {
     "no": 161,
     "name": "Anahir",
     "primaryType": "Crystal",
     "secondaryType": "Fire",
     "image": "Anahir.png"
+  },
+  {
+    "no": 163,
+    "name": "Tyranak",
+    "primaryType": "Fire",
+    "secondaryType": "Nature",
+    "image": "Tyranak.png"
+  },
+  {
+    "no": 164,
+    "name": "Volgon",
+    "primaryType": "Electric",
+    "secondaryType": "",
+    "image": "Volgon.png"
   }
 ]
